@@ -1,0 +1,25 @@
+// GET      ===> /users
+// GET      ===> /users/:id
+// POST     ===> /users/:id
+// PATCH    ===> /users/:id
+// DELETE   ===> /users/:id
+
+
+// app.js                       ===> main file
+
+// /routers
+// /routers/users.js            ===> router for users
+// /routers/students.js         ===> router for students
+
+// /controllers
+// /controllers/users.js        ===> controller for users
+// /controllers/students.js     ===> controller for students
+
+// /views
+// /views/usersGet.ejs          ===> template for all users
+// /views/usersGetId.ejs        ===> template for exact user
+// /views/usersPostId.ejs        ===> template for exact user
+
+// /public
+// /public/css
+// /public/js
