@@ -1,16 +1,17 @@
+//import modules
 const express = require('express');
 const bodyParser = require('body-parser');
+//routers
 const usersRouter = require('./routers/users');
-
+const weatherRouter = require('./routers/weather');
+const carsRouter = require('./routers/cars');
+//dotenv
 require('dotenv').config();
-
+//Начальные переменные
 const PORT = process.env.PORT;
 const app = express();
 
-app.set('view engine', 'ejs');
-
-
-
+//logger
 const logger = (req,res, next)=>{
     const method = req.method;
     const url = req.url;
@@ -18,11 +19,15 @@ const logger = (req,res, next)=>{
     console.log(method, url, dateTime);
     next()
 };
-app.use(logger);
 
+//settings
+app.use(logger);
+app.set('view engine', 'ejs');
 app.use(express.static('./public'))
 app.use(express.urlencoded({extended: true}));
 app.use('/users', usersRouter);
+app.use('/weather',weatherRouter);
+app.use('/cars',carsRouter);
 
 
 app.get('/', (req,res)=>{
