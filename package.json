@@ -1,7 +1,6 @@
 {
   "name": "26.03",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "npm run build:css && nodemon app.js",
@@ -21,5 +20,6 @@
     "sequelize": "^6.20.1",
     "sqlite3": "^5.0.8",
     "uuid": "^8.3.2"
-  }
+  },
+  "description": ""
 }
