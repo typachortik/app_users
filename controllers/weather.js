@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 
 const getWeather = (req, res) => {
     res.render('weather',{
+      cod: null,
+      error: null,
       city: null,
       speed: null,
       id: null,
@@ -20,20 +22,26 @@ const postWeather = async (req, res) => {
       await fetch(url_api)
       .then(res => res.json())
       .then(data => {
-       if(data.cod === '404') {
-         res.render('index', {
-          city: data.message,
-          speed: null,
-          id: null,
-          temp: null
-         });
+       if(data.cod === '400' || data.cod === '404') {
+         const cod = data.cod;
+         const error = data.message;
+         const city = null;
+         const speed = null;
+         const id = null;
+         const temp = null;
+         res.render('weather', {
+          cod, error ,city, speed, id, temp
+        });
+        
        } else {
+        const cod = null;
+        const error = null;
         const city = data.name;
         const speed = data.wind.speed;
         const id = data.id;
         const temp = data.main.temp;
         res.render('weather', {
-          city, speed, id, temp
+          cod, error, city, speed, id, temp
         });
        }
     })

@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 //routers
 const usersRouter = require('./routers/users');
 const weatherRouter = require('./routers/weather');
-const carsRouter = require('./routers/cars');
 //dotenv
 require('dotenv').config();
 //Начальные переменные
@@ -16,7 +15,7 @@ const logger = (req,res, next)=>{
     const method = req.method;
     const url = req.url;
     const dateTime = new Date();
-    console.log(method, url, dateTime);
+    console.log("Событие: ",method, url, dateTime);
     next()
 };
 
@@ -27,7 +26,6 @@ app.use(express.static('./public'))
 app.use(express.urlencoded({extended: true}));
 app.use('/users', usersRouter);
 app.use('/weather',weatherRouter);
-app.use('/cars',carsRouter);
 
 
 app.get('/', (req,res)=>{
@@ -35,5 +33,5 @@ app.get('/', (req,res)=>{
 });
 
 app.listen(PORT, ()=>{
-    console.log(`Сервачок запущен по адресу: localhost:${PORT}`);
+    console.log(`Сервачок запущен по адресу: http://localhost:${PORT}`);
 })

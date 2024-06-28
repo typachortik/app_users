@@ -1,10 +1,23 @@
-<header class="text-gray-400 bg-gray-900 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-        <svg xmlns="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl"><a href="/">APP</a></span>
-    </a>
+
+<header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="btn btn-outline-primary me-2">Главная</a></li>
+          <li><a href="/weather" class="btn btn-outline-primary me-2">Погода</a></li>
+          <li><a href="/users" class="btn btn-outline-primary me-2">Пользователи</a></li>
+        </ul>
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" style="">
+            <li><a class="dropdown-item" href="#">Профиль</a></li>
+            <li><a class="dropdown-item" href="#">Настройки</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Выйти</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>

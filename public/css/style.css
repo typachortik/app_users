@@ -1,0 +1,47 @@
+body {
+    transition: 0.5s;
+    background-color: rgb(22, 0, 22);
+    background-repeat: no-repeat;
+    max-width: 1920px;
+    max-height: 1080px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.header {
+    margin: 1%;
+}
+.section {
+    background-color: rgb(29, 0, 25);
+    padding-top: 2%;
+    transition: 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    border-radius: 15px;
+    display: block;
+}
+.nav {
+    padding: 0.4%;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(196, 0, 170);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav:hover {
+    background-color: rgb(148, 0, 128);
+    transition: 0.5s;
+}
+.pic {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

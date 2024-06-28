@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Главная</title>
+    <%- include('connect_styles') %>
 </head>
-<body>
 <%- include('header') %>
-    <section class="text-gray-400 bg-gray-900 body-font">
-        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://ic.pics.livejournal.com/imhotype/24051864/433166/433166_original.png">
-          <div class="text-center lg:w-2/3 w-full">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Веб-приложение</h1>
-            <p class="leading-relaxed mb-8">В нем есть всего 3 функции: Узнать погоду в определенном городе; Работа с пользователями,поиск моделей по марке, Узнать погоду</p>
-            <div class="flex justify-center">
-              <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a href="/weather">Узнать погоду</a></button>
-              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"><a href="/cars">Найти модель по марке</a></button>
-              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"><a href="/users">Перейти к пользователям</a></button>
-            </div>
-          </div>
-        </div>
-      </section>
+<body>
+    <div class="container">
+          <center><img src="https://ic.pics.livejournal.com/imhotype/24051864/433166/433166_original.png" class="img-fluid" width="50%"></center>
+                <h2><center>Веб-приложение</center></h2><br>
+                    <ul>В нем есть всего 3 функции:
+                        <li>Узнать погоду в определенном городе</li>
+                        <li>Работа с пользователями</li>
+                        <li>Узнать погоду</li>
+                    </ul>
+    </div>
 </body>
 </html>
