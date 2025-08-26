@@ -34,7 +34,7 @@ A simple and efficient user management system
 ### English
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/typachortik/app_users.git
 
 # Navigate to the project directory
 cd app_users
@@ -46,12 +46,12 @@ npm install
 npm run start
 
 # Application will be available at:
-# http://localhost:3000/
+http://localhost:3000/
 ```
 ### Русский
 ```bash
 # Клонировать репозиторий
-git clone <url-репозитория>
+git clone https://github.com/typachortik/app_users.git
 
 # Перейти в директорию проекта
 cd app_users
@@ -63,7 +63,7 @@ npm install
 npm run start
 
 # Приложение будет доступно по адресу:
-# http://localhost:3000/
+http://localhost:3000/
 ```
 ## 🛠️ Tech Stack / Технологический стек
 ### Backend / Бэкенд
