@@ -102,8 +102,6 @@ http://localhost:3000/
 ## 📁 Project Structure / Структура проекта
 ```
 app_users/
-├── 📁 models/ # Database models & operations
-│ # Модели и операции с БД
 ├── 📁 routes/ # API routes and endpoints
 │ # API маршруты и endpoints
 ├── 📁 views/ # EJS templates and pages 
