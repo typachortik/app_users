@@ -4,28 +4,28 @@ const router = express.Router();
 const {getUsers, getUser, createUser, deleteUser, updateUser} = require('../controllers/users');
 var urlencodedParses = bodyParser.urlencoded({extended: false});
 
-// GET localhost:5000/users
+// GET /users
 router.get('/', getUsers);
 
-// GET localhost:5000/users/:id
+// GET /users/:id
 router.get('/:id', getUser);
 
-// POST localhost:5000/users
+// POST /users
 router.post('/', createUser);
 
-// POST localhost:5000/users/create
+// POST /users/create
 router.post('/create', urlencodedParses, createUser);
 
-// DELETE localhost:5000/users/:id
+// DELETE /users/:id
 router.delete('/:id', deleteUser);
 
-// GET localhost:5000/users/:id/delete
+// GET /users/:id/delete
 router.get('/:id/delete', deleteUser);
 
-// PATCH localhost:5000/users
+// PATCH /users
 router.patch('/:id', updateUser);
 
-// POST localhost:5000/users/:id/update
+// POST /users/:id/update
 router.post('/:id/update', urlencodedParses, updateUser);
 
 module.exports = router;

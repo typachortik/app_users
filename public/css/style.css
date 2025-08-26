@@ -1,47 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+  --background: #222222;
+  --background-color: #181818;
+  --accent-color: #ff209b;
+  --accent-color-dark: #7a2950;
+  --second-text: #D4D4D4;
+}
+::-webkit-scrollbar {
+  width: 12px; 
+}
+::-webkit-scrollbar {
+  width: 12px; 
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color); 
+  border-radius: 6px; 
+}
+::-webkit-scrollbar-track {
+  background-color: var(--background-color); 
+  border-radius: 6px; 
+}
 body {
-    transition: 0.5s;
-    background-color: rgb(22, 0, 22);
-    background-repeat: no-repeat;
-    max-width: 1920px;
-    max-height: 1080px;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
+    color: var(--second-text);
+    background: var(--background);
+    transition: all 0.5s ease;
+    line-height: 1.6;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-left: 15%;
+    padding-right: 15%;
 }
-.header {
-    margin: 1%;
+.logo {
+    font-size: 28px;
+    margin-left: 20px;
+    font-weight: 700;
 }
-.section {
-    background-color: rgb(29, 0, 25);
-    padding-top: 2%;
-    transition: 0.5s;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25em;
-    margin-top: 50px;
-    padding-bottom: 100px;
-    border-radius: 15px;
-    display: block;
-}
-.nav {
-    padding: 0.4%;
-    border-radius: 15px;
-    border: none;
-    background-color: rgb(196, 0, 170);
-    color: white;
+.social-link {
+    color: var(--accent-color-dark); 
     text-decoration: none;
-    font-size: 14px;
-}
-.nav:hover {
-    background-color: rgb(148, 0, 128);
     transition: 0.5s;
 }
-.pic {
-    width: 250px;
-    height: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.social-link:hover {
+    color: var(--accent-color);
+}
+.menu-links {
+    margin-right: 20px;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0px 4px 35px rgba(58, 58, 58, 0.589);
+    align-items: center;
+}
+header a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Inter", serif;
+    transition: filter 0.8s;
+}
+header a:hover {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(2000%) hue-rotate(300deg) brightness(100%) contrast(100%);
+}
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    animation: cycle 5s infinite
+}
+.image img {
+    width: 50%;
+}
+@keyframes cycle {
+    0% {
+        filter: none
+    }
+    50% {
+        filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(2000%) hue-rotate(300deg) brightness(100%) contrast(100%);
+    }
+    100% {
+        filter: none;
+    }
+}
+.content {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0px 4px 35px rgba(58, 58, 58, 0.589);
+    padding: 15px;
+    width: 700px;
+
+}
+.content ul {
+    font-size: 24px;
+    font-weight: 700;
+}
+.content li {
+    font-size: 20px;
+    font-weight: 400;
+}
+.users-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.all-users {
+    width: 65%;
+}
+.users-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+.card {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 35px rgba(58, 58, 58, 0.589);
+    margin: 15px;
+}
+.card-text {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent-color);
+    transition: all 0.5s;
+}
+.card-title:hover {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(2000%) hue-rotate(300deg) brightness(100%) contrast(100%);
+}
+.req-user {
+    width: 35%;
+}
+.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 55px;
+    background-color: var(--accent-color-dark);
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.card-button:hover {
+    cursor: pointer;
+    background-color: var(--accent-color);
+}
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+.form-el {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-el label {
+    font-size: 20px;
+    font-weight: 700;
+}
+.form-input {
+    background-color: var(--background);
+    transition: 0.5s;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: var(--second-text);
+    font-size: 18px;
+    outline: none;
+    box-shadow: 0 2px 8px #00000020 inset;
+}
+.form-input:focus {
+    background: #292929;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+.form-button {
+    background: var(--accent-color-dark);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 14px 0;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.form-button:hover {
+    background: var(--accent-color);
 }

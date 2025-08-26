@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <%- include('connect_styles') %>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <%- include('header') %>
 <body>
-    <div class="container">
-          <center><img src="https://ic.pics.livejournal.com/imhotype/24051864/433166/433166_original.png" class="img-fluid" width="50%"></center>
-                <h2><center>Веб-приложение</center></h2><br>
-                    <ul>В нем есть всего 3 функции:
-                        <li>Узнать погоду в определенном городе</li>
-                        <li>Работа с пользователями</li>
-                        <li>Узнать все модели авто по марке</li>
-                    </ul>
+    <div class="main-block">
+        <div class="image">
+            <img src="img/user-edit.png">
+        </div>
+        <div class="content">
+            <h1><center>Веб-приложение <span style="color: var(--accent-color);">APP-USERS</span></center></h1>
+            <div class="content-text">
+                <ul>Функционал
+                    <li>Просмотр всех пользователей</li>
+                    <li>Добавление нового пользователя</li>
+                    <li>Просмотр конкретного пользователя</li>
+                    <li>Изменение конкретного пользователя</li>
+                    <li>Удаление конкретного пользователя</li>
+                </ul>
+                <ul>Состав приложения
+                    <li>Node.JS + Express + EJS + SQLite</li>
+                </ul>
+                <ul>Мои контакты
+                    <li>Telegram: <a href="https://t.me/typachortik" class="social-link"> typachortik</a></li>
+                    <li>My Project: <a href="https://dlthub.ru" class="social-link"> DLT HUB</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>

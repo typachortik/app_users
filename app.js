@@ -7,7 +7,7 @@ const weatherRouter = require('./routers/weather');
 //dotenv
 require('dotenv').config();
 //Начальные переменные
-const PORT = process.env.PORT;
+const PORT = 3000;
 const app = express();
 
 //logger
@@ -25,7 +25,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'))
 app.use(express.urlencoded({extended: true}));
 app.use('/users', usersRouter);
-app.use('/weather',weatherRouter);
 
 
 app.get('/', (req,res)=>{

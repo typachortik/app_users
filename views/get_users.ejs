@@ -5,55 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Все пользователи</title>
-  <%- include('connect_styles') %>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <%- include('header') %>
 <body>
-  <div class="container">
-        <div class="md-3">
-          <h1>Все пользователи</h1>
-        </div>
-          <div class="container">
-            <div class="row">
-          <% users.forEach(user=>{ %>
-            <div class="col md-3">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Логин: <%= user.username %></h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary"> id: <%= user.id %> </h6>
-                <p class="card-text">Пароль: <%= user.password %></p>
-                <p class="card-text">Почта:  <%= user.email %> </p>
-                <a href="./users/<%= user.id %>" class="card-link"> Открыть</a>
-              </div>
-            </div>
-            </div>
-            <% }); %>
-            </div>
-            </div>
-        </div>
-        <div class="container">
-        <form action="/users/create" method="POST" class="md-3" style="width: 50%;">
-          <div class="container">
-          <h2>Регистрация</h2>
-          <div class="md-3">
-            <label for="username" class="form-label">Имя пользователя</label>
-            <input type="text" id="username" name="username" class="form-control">
+  <div class="users-content">
+    <div class="all-users">
+      <span class="users-title">Все пользователи</span>
+      <% users.forEach(user=>{ %>
+        <div class="card">
+          <div class="card-text">Имя: <span class="card-title"><%= user.username %></span></div>
+          <div class="card-text">ID: <span class="card-title"><%= user.id %></span></div>
+          <div class="card-text">Пароль:<span class="card-title"><%= user.password %></span></div>
+          <div class="card-text">Почта:<span class="card-title"><%= user.email %></span></div>
+          <div class="card-text">
+            <a href="/users/<%= user.id %>" class="card-button">Открыть</a>
           </div>
-          <div class="md-3">
-            <label for="email" class="form-label">Почта</label>
-            <input type="email" id="email" name="email" class="form-control">
-          </div>
-          <div class="md-3">
-            <label for="password" class="form-label">Пароль</label>
-            <input type="password" id="password" name="password" class="form-control">
-          </div>
-          <div class="md-3">
-          <button type="submit" class="btn btn-primary mb-3">Создать аккаунт</button>
         </div>
-      </div>
-        </form>
+      <% }); %>
+    </div>
+    <div class="reg-user">
+      <span class="users-title">Регистрация пользователя</span>
+      <form action="/users/create" method="POST" class="card">
+        <div class="form-content">
+          <div class="form-el">
+            <label for="username">Имя пользователя</label>
+            <input type="text" id="username" name="username" class="form-input" required>
+          </div>
+          <div class="form-el">
+            <label for="email">Почта</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          <div class="form-el">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" class="form-input" required>
+          </div>
+          <button type="submit" class="form-button">Создать аккаунт</button>
         </div>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
