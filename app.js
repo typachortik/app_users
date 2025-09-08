@@ -3,7 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 //routers
 const usersRouter = require('./routers/users');
-const weatherRouter = require('./routers/weather');
 //dotenv
 require('dotenv').config();
 //Начальные переменные
